@@ -1,0 +1,38 @@
+return PlaceObj('ModDef', {
+	'title', "Template",
+	'description', "This mod is still a work in progress. Please hop in discord to help test or provide feedback. :)   https://discord.gg/kTgYq9UjWx",
+	'image', "Images/thumbnail.png",
+	'last_changes', "https://github.com/Surviving-Mars-Mods/Survivng_Mars_Mod_Template",
+	'ignore_files', {
+		"*.git/*",
+		"*.svn/*",
+		"src/*",
+		"Info/2do.txt",
+		"*.iml",
+		".idea/*",
+		"*.png",
+	},
+	'dependencies', {
+		PlaceObj('ModDependency', {
+			'id', "FIZZLE1",
+			'title', "Fizzle Fuze's Library",
+			'version_major', 1,
+			'version_minor', 5,
+		}),
+	},
+	'id', "FIZZLE0",
+	'steam_id', "",
+	'pops_desktop_uuid', "",
+	'pops_any_uuid', "",
+	'author', "Fizzle Fuze",
+	'version_major', 1,
+	'version_minor', 1,
+	'version', 69,
+	'lua_revision', 1009413,
+	'saved_with_revision', 1010838,
+	'code', {
+		"Code/Code.lua",
+	},
+	'saved', 1645033554,
+	'has_options', 'true',
+})
