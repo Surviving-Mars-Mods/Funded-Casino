@@ -7,6 +7,12 @@ end
 Log("Loading...")
 
 local function UpdateOptions()
+
+    -- yeah, let's just cause an engine fault by not error handling anything... gg devs
+    if not Mods then return end
+    if not Mods.FFFundedCasino then return end
+    if not Mods.FFFundedCasino.options then return end
+
     --mod options randomly disappear when using CurrentModOptions:GetProperty()
     local LockCCs = Mods.FFFundedCasino.options.LockCCs
     local HideCCs = Mods.FFFundedCasino.options.HideCCs
