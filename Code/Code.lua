@@ -3,10 +3,29 @@ local function Log(...)
     FF.LogMessage(CurrentModDef.title, "FundedCasino", ...)
 end
 
-FF.Lib.Debug = true
+--FF.Lib.Debug = true
 Log("Loading...")
 
 local function UpdateOptions()
+    --mod options randomly disappear when using CurrentModOptions:GetProperty()
+    local LockCCs = Mods.FFFundedCasino.options.LockCCs
+    local HideCCs = Mods.FFFundedCasino.options.HideCCs
+
+    if UIColony then
+        Log("Lock, Hide: ", LockCCs, ", ", HideCCs)
+        if LockCCs then
+            LockBuilding("CasinoComplex", "disable", FF.Funcs.Translate("Replaced by Funded Casino"))
+        end
+        if HideCCs then
+            Log("Hiding building...")
+            LockBuilding("CasinoComplex")
+            --BuildMenuPrerequisiteOverrides["CasinoComplex"] = "hide"
+        end
+        if not (LockCCs or HideCCs) then
+            RemoveBuildingLock("CasinoComplex")
+        end
+
+    end
 end
 
 -- Get profits for this casino
@@ -108,6 +127,7 @@ end
 local function Init()
     Log("INIT")
     SetupIP()
+    UpdateOptions()
     Log("INIT DONE")
 end
 

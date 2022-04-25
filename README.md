@@ -14,7 +14,7 @@ Gamblers bet at higher odds and tourists bet more. Gamblers also take more sanit
 Beware genius colonists!
 
 ### Options:
-This mod has lots of options!
+Select who gets to gamble at the casinos.
 
     Gamblers
         Everyone (Default)

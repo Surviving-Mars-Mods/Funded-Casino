@@ -1,3 +1,6 @@
+Version 1.8
+- Added options to lock and hide the original casino complex from the build menu
+
 Version 1.7
 - Rewrote mod to use library
 - Rewrote mod to use LUA objects instead of C objects to avoid false errors about compatibility

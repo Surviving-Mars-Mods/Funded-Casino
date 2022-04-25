@@ -24,4 +24,14 @@ return {
             "Martians",
         },
     }),
+    PlaceObj('ModItemOptionToggle', {
+        'name', "LockCCs",
+        'DisplayName', "Lock Casino Complexes",
+        'Help', "Lock Casino Complexes in the build menu",
+    }),
+    PlaceObj('ModItemOptionToggle', {
+        'name', "HideCCs",
+        'DisplayName', "Hide Casino Complexes",
+        'Help', "Hide Casino Complexes in the build menu",
+    }),
 }
